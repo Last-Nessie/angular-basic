@@ -1,0 +1,9 @@
+<button (click)="startGame()" [disabled]="startGameButton">Start game</button>
+
+<div>{{startGameButton ? 'TRUE' : 'FALSE'}}</div>
+
+<div *ngIf="startGameButton">
+  <app-card-selection></app-card-selection>
+</div>
+
+<!--<p>{{currentCount}}</p>-->
