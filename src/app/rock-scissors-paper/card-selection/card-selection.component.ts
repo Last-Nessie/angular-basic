@@ -14,61 +14,46 @@ export class CardSelectionComponent implements OnInit {
 
   public compResult: any;
 
-  randomComputer(max: number) {
-    return Math.floor(Math.random() * max);
-  }
-
   compSelection() {
-    this.compResult = this.randomComputer(3);
+    return this.compResult = Math.floor(Math.random() * 3);
   }
 
   userSelection(userData: number) {
     this.compSelection();
 
-    console.log('C - ' + this.compResult);
-    console.log('U - ' + userData);
+    console.log('Comp - ' + this.translateResult(this.compResult));
+    console.log('User - ' + this.translateResult(userData));
 
 
     if (this.compResult === userData) {
 
       console.log('try again');
 
-    } else if ((this.compResult - userData) === -1 || (this.compResult - userData) === 2) {
+    } else if ((userData - this.compResult) === (-1 || 2)) {
       console.log('USER - winner');
     } else {
       console.log('COMPUTER - winner')
     }
 
-    // if (this.compResult === userData) {
-    //   console.log('try again')
-    // } else if (this.compResult > userData){
-    //
-    // } else if (this.compResult < userData){
-    //
-    // }
-
   }
-  //
-  // calculateResult(a: number, b: number) {
-  //   return Math.abs(a-b)
-  // }
+
 
   translateResult(data: number) {
     switch (data) {
       case 0:
-        this.compResult = 'ROCK';
+        return 'ROCK';
         break;
 
       case 1:
-        this.compResult = 'SCISSORS';
+        return 'SCISSORS';
         break;
 
       case 2:
-        this.compResult = 'PAPER';
+        return 'PAPER';
         break;
 
       default:
-        this.compResult = 'select needed';
+        return 'select needed';
         break;
     }
   }
