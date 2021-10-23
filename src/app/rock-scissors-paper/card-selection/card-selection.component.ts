@@ -13,6 +13,7 @@ export class CardSelectionComponent implements OnInit {
   }
 
   public compResult: any;
+  public whoIsWinner: string = '';
 
   compSelection() {
     return this.compResult = Math.floor(Math.random() * 3);
@@ -28,11 +29,14 @@ export class CardSelectionComponent implements OnInit {
     if (this.compResult === userData) {
 
       console.log('try again');
+      this.whoIsWinner = 'try again';
 
     } else if ((userData - this.compResult) === (-1 || 2)) {
       console.log('USER - winner');
+      this.whoIsWinner = 'USER - winner';
     } else {
-      console.log('COMPUTER - winner')
+      console.log('COMPUTER - winner');
+      this.whoIsWinner = 'COMPUTER - winner';
     }
 
   }
@@ -42,19 +46,15 @@ export class CardSelectionComponent implements OnInit {
     switch (data) {
       case 0:
         return 'ROCK';
-        break;
 
       case 1:
         return 'SCISSORS';
-        break;
 
       case 2:
         return 'PAPER';
-        break;
 
       default:
         return 'select needed';
-        break;
     }
   }
 
