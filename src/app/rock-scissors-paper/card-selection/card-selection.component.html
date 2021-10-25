@@ -1,10 +1,36 @@
-<div>Computer result is: {{translateResult(compResult)}}</div>
+<div class="button-container">
 
-<!--<button [src]="imgUrl">ROCK</button>-->
-<button (click)="userSelection(0)">ROCK</button>
-<button (click)="userSelection(1)">SCISSORS</button>
-<button (click)="userSelection(2)">PAPER</button>
+  <mat-card class="game-card {{userCard}}">
+    <mat-card-header>
+      <mat-card-title>User {{userCard}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="userImg">
+  </mat-card>
 
-<h2>Result is: {{whoIsWinner}}</h2>
+  <span><h2>VS</h2></span>
 
+  <mat-card class="game-card {{compCard}}" id="compCard">
+    <mat-card-header>
+      <mat-card-title>Computer {{compCard}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="compImg">
+  </mat-card>
+
+</div>
+
+<div class="button-container user-card">
+
+  <mat-card (click)="userSelection(0)" class="game-card">
+    <img mat-card-image [src]="rockImg" alt="Rock">
+  </mat-card>
+
+  <mat-card (click)="userSelection(1)" class="game-card">
+    <img mat-card-image [src]="scissorsImg" alt="SCISSORS">
+  </mat-card>
+
+  <mat-card (click)="userSelection(2)" class="game-card">
+    <img mat-card-image [src]="paperImg" alt="PAPER">
+  </mat-card>
+
+</div>
 

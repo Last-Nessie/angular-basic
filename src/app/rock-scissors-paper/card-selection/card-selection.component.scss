@@ -1,0 +1,30 @@
+.button-container .game-card {
+  width: 200px;
+  height: 200px;
+  margin: 15px;
+  border: 7px solid #fff;
+
+  &.winner {
+    border: 5px solid #b6efaf;
+  }
+  &.loser {
+    border: 5px solid #ef9699;
+  }
+  &.any {
+    border: 5px solid #ccc;
+  }
+}
+.user-card .game-card {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 7px solid #ffdc85;
+  transition: all 0.2s linear;
+
+  &:hover {
+    margin-top: -20px;
+  }
+  &:active, &:visited, &:target {
+    border-color: #6d6d6d;
+  }
+}

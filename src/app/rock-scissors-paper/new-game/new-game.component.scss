@@ -1,1 +1,16 @@
-button:disabled {display: none}
+.button-container {
+  height: 100%;
+  align-items: center;
+
+  .start-btn {
+    width: 250px;
+    height: 250px;
+    font-size: 38px;
+    transition: all 1s linear;
+
+    &:hover {
+      width: 280px;
+      height: 280px;
+    }
+  }
+}
