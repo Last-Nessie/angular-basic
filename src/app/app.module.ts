@@ -13,7 +13,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { ReversePipe } from './directives/reverse.pipe';
 import { FormsModule } from "@angular/forms";
 import { MatFormFieldModule } from "@angular/material/form-field";
-import {MatInputModule} from "@angular/material/input";
+import { MatInputModule } from "@angular/material/input";
 import { NumbersDirective } from './directives/numbers.directive';
 
 
