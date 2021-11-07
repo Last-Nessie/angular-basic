@@ -9,6 +9,12 @@ import { PlayerResultComponent } from './rock-scissors-paper/player-result/playe
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from '@angular/material/card';
+import { DirectivesComponent } from './directives/directives.component';
+import { ReversePipe } from './directives/reverse.pipe';
+import { FormsModule } from "@angular/forms";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import { NumbersDirective } from './directives/numbers.directive';
 
 
 @NgModule({
@@ -17,13 +23,19 @@ import { MatCardModule } from '@angular/material/card';
     RockScissorsPaperComponent,
     NewGameComponent,
     CardSelectionComponent,
-    PlayerResultComponent
+    PlayerResultComponent,
+    DirectivesComponent,
+    ReversePipe,
+    NumbersDirective
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

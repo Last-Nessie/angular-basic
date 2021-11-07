@@ -1,1 +1,6 @@
-<app-rock-scissors-paper></app-rock-scissors-paper>
+<!--<button *ngIf="!btnStart" (click)="gameButton()">rock-scissors-paper</button>-->
+<div *ngIf="btnStart">
+  <app-rock-scissors-paper></app-rock-scissors-paper>
+</div>
+
+<app-directives></app-directives>

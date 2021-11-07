@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-basic';
+
+  public btnStart: string = '';
+
+  gameButton(): any {
+    return this.btnStart = 'button-started';
+  }
 }
