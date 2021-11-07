@@ -37,7 +37,7 @@ export class CardSelectionComponent implements OnInit {
     this.compImg = this.translateResult(comp);
 
     if (comp === user) {
-      this.userCard = this.compCard = 'any';
+      this.userCard = this.compCard = 'draw';
 
     } else if ((user - comp) === (-1 || 2)) {
       this.userCard = 'winner';

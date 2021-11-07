@@ -14,17 +14,24 @@
     border: 5px solid #ccc;
   }
 }
-.user-card .game-card {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  border: 7px solid #ffdc85;
-  transition: all 0.2s linear;
+.user-card {
+  margin-top: 70px;
 
-  &:hover {
-    margin-top: -20px;
-  }
-  &:active, &:visited, &:target {
-    border-color: #6d6d6d;
+  & .game-card {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 7px solid #fff;
+    transition: all 0.2s linear;
+
+    &:hover {
+      margin-top: -10px;
+    }
+    &:active, &:visited, &:target {
+      border-color: #6d6d6d;
+    }
   }
 }
+

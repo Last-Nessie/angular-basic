@@ -13,10 +13,7 @@ export class NewGameComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // currentCount = 'counter';
   public startGameButton = '';
-
-
 
   startGame(): string {
     return this.startGameButton = 'game-started';
